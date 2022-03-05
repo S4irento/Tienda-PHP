@@ -16,9 +16,14 @@ class ModelArticulo extends Database
     return $this->nombre;
   }
 
-  function getid()
+  function getId()
   {
     return $this->id;
+  }
+
+  function setId($id)
+  {
+    $this->$id = $id;
   }
 
   function setValor($valor)
