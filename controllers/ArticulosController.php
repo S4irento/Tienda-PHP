@@ -19,6 +19,8 @@ class ArticulosController
 
     $insert = $Articulos->insertArticulo();
 
+    header('location: '.base_url.'Articulos/index');
+
     return $insert;
   }
 

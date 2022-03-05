@@ -93,4 +93,11 @@ class ModelPedidos extends Database
     return $datos;
   }
 
+  public function listarPedidos()
+  {
+    $sql = 'SELECT p.nombre_cliente, a.nombre as articulo, p.cantidad, (a.valor * p.cantidad) as valor_total, p.ciudad, p.direccion, date(p.fecha) as fecha FROM pedidos p JOIN articulos a';
+    $datos = $this->db->query($sql);
+    return $datos;
+  }
+
 }

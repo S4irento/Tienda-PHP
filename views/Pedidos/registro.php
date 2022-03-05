@@ -18,3 +18,29 @@
 
   <button type="submit">Guardar Pedido</button>
 </form>
+<table>
+  <thead>
+    <tr>
+      <td>Cliente</td>
+      <td>Articulo</td>
+      <td>Catatidad</td>
+      <td>Valor total</td>
+      <td>Ciudad</td>
+      <td>Dirección</td>
+      <td>Fecha</td>
+    </tr>
+  </thead>
+  <tbody>
+    <?php while($pedido = $pedidos->fecth_object()): ?>
+      <tr>
+        <td><?= $pedido->nombre_cliente ?></td>
+        <td><?= $pedido->articulo ?></td>
+        <td><?= $pedido->cantidad ?></td>
+        <td><?= $pedido->valor_total ?></td>
+        <td><?= $pedido->ciudad ?></td>
+        <td><?= $pedido->direccion ?></td>
+        <td><?= $pedido->fecha ?></td>
+      </tr>
+    <?php endwhile; ?>
+  </tbody>
+</table>
